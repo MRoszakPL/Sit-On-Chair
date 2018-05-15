@@ -18,19 +18,19 @@ This project will be regularly updated until all website functionality are compl
 * Contact form
 * Calculator of your order
 
-##Used languages
+## Used languages
 
-####Currently used
+#### Currently used
 
 * HTML
 * CSS
 
-####Planed to add:
+#### Planed to add:
 
 * JS
   
   
-##Status 15.05.2018  - _Work in progress_
+## Status 15.05.2018  - _Work in progress_
 
 
               
