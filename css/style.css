@@ -1,0 +1,231 @@
+body{
+    font-family: "Rad Arial",  Arial, Halvetica, sans-serif;
+}
+
+.clearfix{
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+nav {
+
+    background-color: black;
+    height: 40px;
+
+    font-size: 10px;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.container::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+nav div ul {
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    float:right;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+nav > div > ul > li {
+    padding: 0 10px;
+    float: left;
+    position: relative;
+    margin-right: 40px;
+}
+
+nav > div > ul > li >ul {
+    position: absolute;
+    display: none;
+}
+
+
+nav > div > ul > li ul::before{
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    right: 50%;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid black;
+}
+
+nav > div > ul > li:hover ul {
+    display: block;
+}
+
+
+.dropdown {
+    right: -40px;
+    left: -40px;
+    padding: 0 10px;
+    width: 100px;
+    text-align: center;
+}
+
+.dropdown li {
+
+    background-color: black;
+}
+.dropdown li a{
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.dropdown li:first-child {
+    margin-top: 5px;
+}
+
+nav > div> label{
+    float: left;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: white;
+}
+
+nav > div > label > span{
+    color: #2cd1b3;
+    font-weight: 700;
+}
+
+.col-10{
+    padding: 0;
+    width: 10%;
+    box-sizing: border-box;
+    float: left;
+    line-height: 500px;
+    color: #24ba9f;
+    font-size: 40px;
+}
+
+img{
+    display: 0;
+    margin: 0 auto;
+}
+p{
+    margin: 0;
+}
+
+.col-10:first-child{
+    text-align: center;
+    height: 500px;
+}
+.col-40{
+
+    width: 40%;
+    box-sizing: border-box;
+    float: left;
+    height: 500px;
+}
+
+.col-40 div{
+
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+
+
+.col-33{
+    width: 33.3333%;
+    box-sizing: border-box;
+    float: left;
+    margin-bottom: 75px;
+}
+
+.col-33:last-of-type{
+    border: 1px solid #dbdbdb;
+    height: 235px;
+
+}
+
+
+
+.slider div ul{
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
+
+.slider{
+    rgba(254,254,254,1)), color-stop(8%, rgba(254,254,254,1)), color-stop(46%, rgba(250,250,250,1)), color-stop(82%, rgba(226,226,226,1)), color-stop(95%, rgba(219,219,219,1)), color-stop(100%, rgba(219,219,219,1)));
+    background: -webkit-linear-gradient(top, rgba(254,254,254,1) 0%, rgba(254,254,254,1) 8%, rgba(250,250,250,1) 46%, rgba(226,226,226,1) 82%, rgba(219,219,219,1) 95%, rgba(219,219,219,1) 100%);
+    background: -o-linear-gradient(top, rgba(254,254,254,1) 0%, rgba(254,254,254,1) 8%, rgba(250,250,250,1) 46%, rgba(226,226,226,1) 82%, rgba(219,219,219,1) 95%, rgba(219,219,219,1) 100%);
+    background: -ms-linear-gradient(top, rgba(254,254,254,1) 0%, rgba(254,254,254,1) 8%, rgba(250,250,250,1) 46%, rgba(226,226,226,1) 82%, rgba(219,219,219,1) 95%, rgba(219,219,219,1) 100%);
+    background: linear-gradient(to bottom, rgba(254,254,254,1) 0%, rgba(254,254,254,1) 8%, rgba(250,250,250,1) 46%, rgba(226,226,226,1) 82%, rgba(219,219,219,1) 95%, rgba(219,219,219,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#dbdbdb', GradientType=0 );
+    margin-bottom: 30px;
+}
+.slider div ul li{
+    display: block;
+
+}
+
+.slider div>ul>li:not(:first-child){
+    display: none;
+}
+
+
+button{
+
+    margin: 0 auto;
+    background-color: #24ba9f;
+    width: 260px;
+    height: 50px;
+    color: white;
+    border-radius: 10px;
+    border-color: transparent;
+}
+
+button span{
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.prices{
+    height: 700px;
+    background-color: #f1f1f1;
+}
+
+.contact {
+    height: 650px;
+    background-color: #ffffff;
+
+}
+
+
+
+.col-60{
+    width: 60%;
+    box-sizing: border-box;
+    float: left;
+}
+
+input, textarea{
+    display: block;
+    margin: 20px 0px;
+    resize: none;
+}
+
+.col-30 a{
+    display: block;
+    float: left;
+}
