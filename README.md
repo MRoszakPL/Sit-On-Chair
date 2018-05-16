@@ -9,6 +9,7 @@ This project will be regularly updated until all website functionality are compl
 #### Main functionalities
 
 #### Created: 
+
 * Menu with dropdown
 
 #### ToDo:
@@ -30,9 +31,10 @@ This project will be regularly updated until all website functionality are compl
 * JS
   
   
-## Status 15.05.2018  - _Work in progress_
+## Status 16.05.2018  - _Work in progress_
 
-
+Big part of HTML and CSS is done, but project need optimization and little design changes. 
+Mostly in case of CSS selectors. JS implementation not started yet.
               
 
 

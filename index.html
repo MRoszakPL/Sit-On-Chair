@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>Sit On Chair</title>
     <link href="https://necolas.github.io/normalize.css/8.0.0/normalize.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700&amp;subset=latin-ext" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700&amp;subset=latin-ext" rel="stylesheet">
 
 </head>
 <body>
@@ -41,8 +41,8 @@
                     <img src="images/black_chair.png">
                 </div>
                 <div class="col-40">
-                    <div>
-                        <p>SIT <span>ON</span> OUR  <span>CHAIR</span></p>
+                    <div class="slogan">
+                        <p>SIT <span>ON</span> OUR <span>CHAIR</span></p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Accusamus ad blanditiis expedita iste placeat. Animi autem,
                             dolore esse exercitationem expedita fuga,
@@ -66,22 +66,25 @@
                 <div class="col-40"></div>
                 <div class="col-10"></div>
             </li>
-    </ul>
+        </ul>
     </div>
 </section>
 <section class="gallery">
     <div class="container">
         <div class="col-33">
             <img src="images/box1_img.jpg">
+            <div class="overlay"><h2>Chair <span>Clair</span></h2></div>
         </div>
         <div class="col-33">
             <img src="images/box2_img.jpg">
+            <div class="overlay"><h2>Chair <span>Margarita</span></h2></div>
         </div>
         <div class="col-33">
-            <span>Find all inputs        </span>
+            <h2>Find all inputs </h2>
             <p>Finds all inputs that are not checked and highlights the next sibling span.
                 notice there is no change when clicking the checkboxes since no click events
                 have been linked.</p>
+            <p>Notice there is no change when clicking the checkboxes since no click events have been</p>
         </div>
     </div>
 </section>
@@ -89,46 +92,61 @@
     <div class="container">
         <h2>Cennik</h2>
         <div class="planForm">
-            <p>Basic plan</p>
-            <div class="rouned">
-                <p>85<span>99</span></p>
-                <p>pln/msc</p>
+            <span class="circle"></span>
+            <div class="row-50">
+                <p>Basic plan</p>
+                <div class="rounded">
+                    <p>85<sup>99</sup></p>
+                    <p>pln/msc</p>
+                </div>
             </div>
-            <ul>
-                <li>Zakup towaru + dowóz</li>
-                <li>Serwis</li>
-                <li></li>
-                <li></li>
-            </ul>
-            <button>Dołącz</button>
+            <div class="row-50">
+                <ul>
+                    <li>Zakup towaru + dowóz</li>
+                    <li>Serwis</li>
+                    <li class="notVisible"></li>
+                    <li class="notVisible"></li>
+                </ul>
+                <button>Dołącz</button>
+            </div>
         </div>
         <div class="planForm active">
-            <p>Standard plan</p>
-            <div class="rouned">
-                <p>95<span>99</span></p>
-                <p>pln/msc</p>
+            <span class="circle"></span>
+            <div class="row-50">
+                <p>Standard plan</p>
+                <div class="rounded activated">
+                    <p>95<sup>99</sup></p>
+                    <p>pln/msc</p>
+                </div>
             </div>
-            <ul>
-                <li>Zakup towaru + dowóz</li>
-                <li>Serwis</li>
-                <li>Gwarancja 5 lat</li>
-                <li></li>
-            </ul>
-            <button>Dołącz</button>
+            <div class="row-50">
+                <ul>
+                    <li>Zakup towaru + dowóz</li>
+                    <li>Serwis</li>
+                    <li>Gwarancja 5 lat</li>
+                    <li class="notVisible"></li>
+                </ul>
+                <button>Dołącz</button>
+            </div>
         </div>
         <div class="planForm">
-            <p>Advance plan</p>
-            <div class="rouned">
-                <p>211<span>00</span></p>
-                <p>pln/msc</p>
+            <span class="circle active"></span>
+            <div class="row-50">
+                <p>Advance plan</p>
+                <div class="rounded">
+                    <p>211<sup>00</sup></p>
+                    <p>pln/msc</p>
+                </div>
             </div>
-            <ul>
-                <li>Zakup towaru + dowóz</li>
-                <li>Serwis</li>
-                <li>Gwarancja 5 lat</li>
-                <li>Porady projektanta</li>
-            </ul>
-            <button>Dołącz</button>
+            <div class="row-50">
+                <ul>
+                    <li>Zakup towaru + dowóz</li>
+                    <li>Serwis</li>
+                    <li>Gwarancja 5 lat</li>
+                    <li>Porady projektanta</li>
+                </ul>
+                <button>Dołącz</button>
+            </div>
         </div>
 
     </div>
@@ -141,12 +159,12 @@
             <div class="col-60">
                 <input type="text" name="name" placeholder="Imię">
                 <input type="email" name="email" placeholder="email">
-                <textarea  name="message" placeholder="Wiadomość"></textarea>
+                <textarea name="message" placeholder="Wiadomość"></textarea>
                 <span id="copyrights">Copyright 2014|All Rights Reserved. - Sit On Chair</span>
             </div>
             <div class="col-40">
                 <img class="clearfix" src="images/red_chair.png">
-                    <p class="permission"> <img src="images/form_ok.jpg">Zgadzam się na przetwarzanie danych osobowych</p>
+                <p class="permission"><input type="checkbox">Zgadzam się na przetwarzanie danych osobowych</p>
                 <button>Wyślij</button>
                 <div class="communities">
                     <a href=""><img src="images/flickr.png"></a>
