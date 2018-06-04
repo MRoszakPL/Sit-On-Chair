@@ -11,30 +11,22 @@ This project will be regularly updated until all website functionality are compl
 #### Created: 
 
 * Menu with dropdown
-
-#### ToDo:
-
 * Slider with images and text
 * Gallery
 * Contact form
 * Calculator of your order
 
-## Used languages
-
-#### Currently used
+### Used languages:
 
 * HTML
-* CSS
-
-#### Planed to add:
-
-* JS
+* CSS (SCSS)
+* JS (jQuery)
   
   
-## Status 16.05.2018  - _Work in progress_
+## Status 4.06.2018 - Work in progress
 
-Big part of HTML and CSS is done, but project need optimization and little design changes. 
-Mostly in case of CSS selectors. JS implementation not started yet.
+All functionalities are working. CSS selectors need optimalization. Maybe JS part will be change to be written with jQuery. 
+
               
 
 

@@ -1,0 +1,24 @@
+{
+  "name": "sit-on-chair",
+  "version": "1.0.0",
+  "description": "Chair shop page project created during CodersLab JS course.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MRoszakPL/Sit-On-Chair.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MRoszakPL/Sit-On-Chair/issues"
+  },
+  "homepage": "https://github.com/MRoszakPL/Sit-On-Chair#readme"
+}

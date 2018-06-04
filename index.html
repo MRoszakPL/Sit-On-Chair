@@ -2,23 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sit On Chair</title>
     <link href="https://necolas.github.io/normalize.css/8.0.0/normalize.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700&amp;subset=latin-ext" rel="stylesheet">
-    <link href="css/style.css" type="text/css" rel="stylesheet">
-
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+    <script src="js/app.js"></script>
 
 </head>
 <body>
 <nav>
     <div class="container">
         <label>Sit <span>On</span> Chair</label>
+        <p id="menu"> Menu </p>
         <ul>
             <li>
                 <a href="">O FIRMIE</a>
 
                 <ul class="dropdown">
-
                     <li><a href="">Aktualności</a></li>
                     <li><a href="">Nasz team</a></li>
                     <li><a href="">Historia</a></li>
@@ -27,16 +28,40 @@
             <li><a href="">GALERIA</a></li>
             <li><a href="">KONTAKT</a></li>
         </ul>
+
     </div>
+
+
+
+
 </nav>
 
+<div class="menuFromAbove">
+    <ul>
+        <li>
+            <a href="">O FIRMIE</a>
+
+            <ul class="dropdown">
+                <li><a href="">Aktualności</a></li>
+                <li><a href="">Nasz team</a></li>
+                <li><a href="">Historia</a></li>
+            </ul>
+        </li>
+        <li><a href="">GALERIA</a></li>
+        <li><a href="">KONTAKT</a></li>
+    </ul>
+</div>
+
+
 <section class="slider">
+
+
     <div class="container">
+        <div class="col-10">
+            <p><</p>
+        </div>
         <ul>
             <li>
-                <div class="col-10">
-                    <p><</p>
-                </div>
                 <div class="col-40">
                     <img src="images/black_chair.png">
                 </div>
@@ -50,25 +75,45 @@
                         <button><span>Zobacz więcej</span></button>
                     </div>
                 </div>
-                <div class="col-10">
-                    <p> ></p>
+            </li>
+            <li>
+                <div class="col-40">
+                    <div class="slogan">
+                        <p>SIT <span>ON</span> OUR <span>CHAIR</span></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Accusamus ad blanditiis expedita iste placeat. Animi autem,
+                            dolore esse exercitationem expedita fuga,
+                            illum impedit nisi officia quos, reiciendis repellat similique suscipit!</p>
+                        <button><span>Zobacz więcej</span></button>
+                    </div>
+                </div>
+                <div class="col-40">
+                    <img src="images/orange_chair.png">
                 </div>
             </li>
             <li>
-                <div class="col-10"></div>
-                <div class="col-40"></div>
-                <div class="col-40"></div>
-                <div class="col-10"></div>
-            </li>
-            <li>
-                <div class="col-10"></div>
-                <div class="col-40"></div>
-                <div class="col-40"></div>
-                <div class="col-10"></div>
+
+                <div class="col-40">
+                    <div class="slogan">
+                        <p>SIT <span>ON</span> OUR <span>CHAIR</span></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Accusamus ad blanditiis expedita iste placeat. Animi autem,
+                            dolore esse exercitationem expedita fuga,
+                            illum impedit nisi officia quos, reiciendis repellat similique suscipit!</p>
+                        <button><span>Zobacz więcej</span></button>
+                    </div>
+                </div>
+                <div class="col-40">
+                    <img src="images/black_chair.png">
+                </div>
             </li>
         </ul>
+        <div class="col-10">
+            <p> ></p>
+        </div>
     </div>
 </section>
+
 <section class="gallery">
     <div class="container">
         <div class="col-33">
@@ -80,75 +125,81 @@
             <div class="overlay"><h2>Chair <span>Margarita</span></h2></div>
         </div>
         <div class="col-33">
-            <h2>Find all inputs </h2>
-            <p>Finds all inputs that are not checked and highlights the next sibling span.
-                notice there is no change when clicking the checkboxes since no click events
-                have been linked.</p>
-            <p>Notice there is no change when clicking the checkboxes since no click events have been</p>
+            <div class="text">
+                <h2>Find all inputs </h2>
+                <p>Finds all inputs that are not checked and highlights the next sibling span.
+                    notice there is no change when clicking the checkboxes since no click events
+                    have been linked.</p>
+                <p>Notice there is no change when clicking the checkboxes since no click events have been</p>
+            </div>
         </div>
     </div>
 </section>
+
 <section class="prices">
     <div class="container">
-        <h2>Cennik</h2>
-        <div class="planForm">
-            <span class="circle"></span>
-            <div class="row-50">
-                <p>Basic plan</p>
-                <div class="rounded">
-                    <p>85<sup>99</sup></p>
-                    <p>pln/msc</p>
+        <h2>Cennik</h2><br>
+        <div class="offers">
+            <div class="planForm">
+                <span class="circle"></span>
+                <div class="row-50">
+                    <p class="offerTitle">Basic plan</p>
+                    <div class="rounded">
+                        <p>85<sup>99</sup></p>
+                        <p>pln/msc</p>
+                    </div>
+                </div>
+                <div class="row-50">
+                    <ul>
+                        <li>Zakup towaru + dowóz</li>
+                        <li>Serwis</li>
+                        <li class="notVisible"></li>
+                        <li class="notVisible"></li>
+                    </ul>
+                    <button>Dołącz</button>
                 </div>
             </div>
-            <div class="row-50">
-                <ul>
-                    <li>Zakup towaru + dowóz</li>
-                    <li>Serwis</li>
-                    <li class="notVisible"></li>
-                    <li class="notVisible"></li>
-                </ul>
-                <button>Dołącz</button>
-            </div>
-        </div>
-        <div class="planForm active">
-            <span class="circle"></span>
-            <div class="row-50">
-                <p>Standard plan</p>
-                <div class="rounded activated">
-                    <p>95<sup>99</sup></p>
-                    <p>pln/msc</p>
-                </div>
-            </div>
-            <div class="row-50">
-                <ul>
-                    <li>Zakup towaru + dowóz</li>
-                    <li>Serwis</li>
-                    <li>Gwarancja 5 lat</li>
-                    <li class="notVisible"></li>
-                </ul>
-                <button>Dołącz</button>
-            </div>
-        </div>
-        <div class="planForm">
-            <span class="circle active"></span>
-            <div class="row-50">
-                <p>Advance plan</p>
-                <div class="rounded">
-                    <p>211<sup>00</sup></p>
-                    <p>pln/msc</p>
-                </div>
-            </div>
-            <div class="row-50">
-                <ul>
-                    <li>Zakup towaru + dowóz</li>
-                    <li>Serwis</li>
-                    <li>Gwarancja 5 lat</li>
-                    <li>Porady projektanta</li>
-                </ul>
-                <button>Dołącz</button>
-            </div>
-        </div>
 
+            <div class="planForm">
+                <span class="circle"></span>
+                <div class="row-50">
+                    <p class="offerTitle">Standard plan</p>
+                    <div class="rounded">
+                        <p>95<sup>99</sup></p>
+                        <p>pln/msc</p>
+                    </div>
+                </div>
+                <div class="row-50">
+                    <ul>
+                        <li>Zakup towaru + dowóz</li>
+                        <li>Serwis</li>
+                        <li>Gwarancja 5 lat</li>
+                        <li class="notVisible"></li>
+                    </ul>
+                    <button>Dołącz</button>
+                </div>
+            </div>
+
+            <div class="planForm">
+                <span class="circle"></span>
+                <div class="row-50">
+                    <p class="offerTitle">Advance plan</p>
+                    <div class="rounded">
+                        <p>211<sup>00</sup></p>
+                        <p>pln/msc</p>
+                    </div>
+                </div>
+                <div class="row-50">
+                    <ul>
+                        <li>Zakup towaru + dowóz</li>
+                        <li>Serwis</li>
+                        <li>Gwarancja 5 lat</li>
+                        <li>Porady projektanta</li>
+                    </ul>
+                    <button>Dołącz</button>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -160,29 +211,107 @@
                 <input type="text" name="name" placeholder="Imię">
                 <input type="email" name="email" placeholder="email">
                 <textarea name="message" placeholder="Wiadomość"></textarea>
-                <span id="copyrights">Copyright 2014|All Rights Reserved. - Sit On Chair</span>
+
             </div>
             <div class="col-40">
-                <img class="clearfix" src="images/red_chair.png">
-                <p class="permission"><input type="checkbox">Zgadzam się na przetwarzanie danych osobowych</p>
-                <button>Wyślij</button>
-                <div class="communities">
-                    <a href=""><img src="images/flickr.png"></a>
-                    <a href=""><img src="images/vimeo.png"></a>
-                    <a href=""><img src="images/pinterest.png"></a>
-                    <a href=""><img src="images/twitter.png"></a>
-                    <span>SIT <b>ON</b> CHAIR</span>
+                <img class="chairImage" src="images/red_chair.png">
+                <div class="checkbox check-box">
+                    <input type="checkbox" id="permission">
+                    <label for="permission">Zgadzam się na przetwarzanie danych osobowych</label>
                 </div>
+                <button id="send">Wyślij</button>
             </div>
         </form>
-
-
+        <div id="footline">
+            <div class="communities">
+                <a href=""><img src="images/flickr.png"></a>
+                <a href=""><img src="images/vimeo.png"></a>
+                <a href=""><img src="images/pinterest.png"></a>
+                <a href=""><img src="images/twitter.png"></a>
+                <span>SIT <b>ON</b> CHAIR</span>
+            </div>
+            <span id="copyrights">Copyright 2014 | All Rights Reserved. - Sit On Chair</span>
+        </div>
     </div>
 </section>
-
-
 <footer>
-    <!-- Miejsce na kalkulator -->
+    <section class="calculator">
+
+        <div class="container">
+            <section class="choice_part inline">
+                <header>
+                    <h3>SKOMPONUJ SWOJE KRZESŁO</h3>
+                    <span class="green_bell"></span>
+                </header>
+
+                <div class="form">
+                    <div class="drop_down_list">
+                        <span class="list_label">Wybierz rodzaj</span>
+                        <span class="list_arrow"></span>
+                        <ul class="list_panel">
+                            <li data-price="300">Clair</li>
+                            <li data-price="200">Margarita</li>
+                            <li data-price="150">Selena</li>
+                        </ul>
+                    </div>
+                    <div class="drop_down_list">
+                        <span class="list_label">Wybierz kolor</span>
+                        <span class="list_arrow"></span>
+                        <ul class="list_panel">
+                            <li data-price="20">Czerwony</li>
+                            <li data-price="0">Czarny</li>
+                            <li data-price="30">Pomarańczowy</li>
+                        </ul>
+                    </div>
+                    <div class="drop_down_list">
+                        <span class="list_label">Wybierz materiał</span>
+                        <span class="list_arrow"></span>
+                        <ul class="list_panel">
+                            <li data-price="80">Tkanina</li>
+                            <li data-price="100">Skóra</li>
+                        </ul>
+                    </div>
+                    <div class="checkbox check-box">
+                        <input type="checkbox" id="transport" data-transport-price="200">
+                        <label for="transport">Transport</label>
+                    </div>
+                    <!--<div class="checkbox"></div>-->
+                    <!--<span class="list_label inline_text">Transport</span>-->
+                </div>
+            </section>
+
+            <section class="image_part inline">
+                <img src="images/red_chair.png">
+            </section>
+
+            <section class="summary_part inline">
+                <header>
+                    <h3>PODSUMOWANIE</h3>
+                    <span class="green_bell"></span>
+                </header>
+
+                <div class="summary_panel">
+                    <div class="panel_left">
+                        <h4 class="title">Twój fotel</h4>
+                        <span class="color"></span>
+                        <span class="pattern"></span>
+                        <span class="transport"></span>
+                    </div>
+                    <div class="panel_right">
+                        <h4 class="title value"></h4>
+                        <span class="color value"></span>
+                        <span class="pattern value"></span>
+                        <span class="transport value"></span>
+                    </div>
+                    <div class="sum_label">SUMA</div>
+                    <div class="sum"><strong></strong></div>
+                </div>
+                <a href="" class="green_button">Zamawiam</a>
+            </section>
+        </div>
+    </section>
 </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </body>
 </html>
