@@ -1,155 +1,164 @@
 nav {
   display: flex;
-  background-color: black;
+  background-color: $headerBackground;
   color: white;
   width: 100vw;
-  height: 80px;
+  height: 5rem;
   font-size: 1rem;
   align-items: center;
   justify-content: center;
   font-weight: bold;
 
   .container {
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
   }
 
-  label, p {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    text-transform: uppercase;
-
-  }
-
-  span {
-    color: $headersColor;
-  }
-
-  ul {
+  .slideMenu {
+    width: 100%;
+    height: 20rem;
     display: none;
-    margin-right: 30px;
-  }
+    overflow-y: hidden;
 
-  p {
-    font-size: 20px;
-    margin-right: 30px;
-  }
-
-  a {
-    text-decoration: none;
-    color: white;
-  }
-
-}
-
-@media (min-width: 1024px) {
-  nav {
-    font-size: 0.75rem;
-    height: 40px;
-    p {
-      display: none;
-    }
-
-    ul {
+    > ul {
       display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       list-style-type: none;
 
+      margin-right: 2rem;
+      height: 100%;
+      width: 100%;
+
+      > li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 16.6666%;
+        width: 100%;
+
+        &:first-of-type {
+          height: 10rem;
+        }
+      }
+    }
+
+    .dropdown {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      list-style-type: none;
+      width: 100%;
+      height: 10rem;
       li {
-        box-sizing: border-box;
-        margin-right: 1rem;
-        position: relative;
-
-
-        ul {
-          display: none;
-          position: absolute;
-
-        }
-
-        ul:before {
-          margin-top: 10px;
-          position: absolute;
-          content: "";
-          display: block;
-          top: 0;
-          right: 50%;
-          width: 0;
-          height: 0;
-          border-left: 5px solid transparent;
-          border-right: 5px solid transparent;
-          border-bottom: 5px solid black;
-        }
-
-        &:hover ul {
-          display: block;
-          z-index: 2;
-        }
-
-      }
-    }
-  }
-
-  .dropdown {
-
-    padding-top: 15px;
-    right: -100px;
-    width: 200px;
-    text-align: center;
-    font-size: 15px;
-    li {
-      background-color: black;
-      a {
-        line-height: 30px;
-        font-weight: 400;
-      }
-      &:first-child {
-        padding-top: 10px;
+        background-color: $headerBackground;
+        height: 33.33333%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
 
+    p {
+      font-size: 1.2rem;
+      margin-right: 2rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
   }
-}
 
-.menuFromAbove {
-  display: none;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  height: 300px;
-
-  li {
-    background-color: black;
+  .minimal_menu {
     width: 100%;
-    text-align: center;
-    line-height: 50px;
-    height: 50px;
-    @media (min-width: 1024px) {
-      display: none;
-    }
-  }
-  > ul {
-    list-style-type: none;
     display: flex;
-    flex-direction: column;
-    width: 100%;
     align-items: center;
-    justify-content: flex-start;
-    > li {
-      &:first-of-type {
-        height: 200px;
+    justify-content: space-between;
+    label, p {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      text-transform: uppercase;
+    }
+    span {
+      color: $mainAccentColor;
+    }
+
+  }
+  @media (min-width: 1024px) {
+    .container {
+      flex-direction: row;
+    }
+
+    .dropdown {
+      display: none;
+      padding-top: 1rem;
+      top: 5.8rem;
+      width: 100%;
+      text-align: center;
+      li {
+
+        a {
+          line-height: 2rem;
+          font-weight: 400;
+        }
+        &:first-child {
+          padding-top: 1rem;
+        }
       }
-      &:not(first-of-type) {
-        height: 50px;
+
+    }
+    .minimal_menu {
+      width: 50vw;
+      p#menu {
+        display: none;
+      }
+
+    }
+    .slideMenu {
+      overflow-y: visible;
+      width: 50vh;
+      height: 5rem;
+      display: flex;
+      z-index: 2;
+      ul {
+        flex-direction: row;
+        height: 100%;
+        display: flex;
+        list-style-type: none;
+        li {
+          box-sizing: border-box;
+          margin-right: 1rem;
+          position: relative;
+
+          ul {
+            display: none;
+            position: absolute;
+            &:before {
+              margin-top: calc(1rem - 5px);
+              position: absolute;
+              box-sizing: border-box;
+              content: "";
+              display: block;
+              top: 0;
+              right: 50%;
+              width: 0;
+              height: 0;
+              border-left: 5px solid transparent;
+              border-right: 5px solid transparent;
+              border-bottom: 5px solid $headerBackground;
+            }
+          }
+
+          &:hover ul {
+            display: block;
+          }
+
+        }
       }
     }
   }
-  a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1rem;
-  }
-
 }
 
 

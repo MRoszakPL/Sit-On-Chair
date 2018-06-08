@@ -175,16 +175,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    //Wysuwane menu
+    //Wysuwane menu w mobile-view
 
 
     var menuButton = $('#menu');
-    var menu  = $('.menuFromAbove');
-
+    var menu  = $('.slideMenu');
+    var i = 0;
 
     menuButton.on('click', function () {
+        if(i==0){
 
-        menu.slideToggle(1000);
+
+            $('nav').animate({height: "400px"},1500);
+            i = 1;
+        } else {
+            i = 0;
+
+            $('nav').animate({height: "80px"},1500);
+        }
+
+        menu.slideToggle(1500);
+
     })
 
 

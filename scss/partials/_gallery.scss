@@ -1,0 +1,89 @@
+// Gallery css
+.gallery {
+
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+
+  .container {
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media (min-width: 800px) {
+      max-width: 1200px;
+      min-height: 350px;
+    }
+  }
+
+  .col-33 {
+    flex-grow: 2;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    font-size: 0.6rem;
+
+    &:last-of-type {
+      max-width: 330px;
+      height: 15rem;
+      align-items: center;
+      justify-content: center;
+      .text {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #dbdbdb;
+        h2 {
+          margin-top: 2rem;
+          margin-left: 1.2rem;
+          margin-right: 1.2rem;
+          display: block;
+          width: 8rem;
+          border-bottom: 7px solid $underlineColor;
+          font-size: 0.9rem;
+        }
+        p {
+          margin-top: 1.2rem;
+          margin-left: 1.2rem;
+          margin-right: 1.2rem;
+          font-weight: lighter;
+          font-size: 0.9rem;
+        }
+      }
+    }
+    .overlay {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      bottom: 2rem;
+      height: 4rem;
+      width: 20rem;
+      background-color: rgba(255, 255, 255, 0.2);
+      h2 {
+        display: block;
+        width: 8rem;
+        margin-left: 1.4rem;
+        border-bottom: 7px solid $underlineColor;
+        span {
+          text-transform: uppercase;
+        }
+      }
+    }
+    @media (min-width: 768px) {
+
+      &:last-of-type {
+        max-width: 400px;
+        .text {
+          margin-left: 2rem;
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+}

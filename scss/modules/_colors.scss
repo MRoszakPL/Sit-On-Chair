@@ -1,5 +1,10 @@
-$headersColor: #25bba0;
-$underlineColor: #25bba0;
+
+$mainAccentColor: #25bba0;
+$headerBackground: black;
+
+$underlineColor:#25bba0;
+
+
 
 @mixin linearGradient($top, $bottom){
   background: $top; /* Old browsers */
