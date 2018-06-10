@@ -41,45 +41,7 @@ ul, li {
   }
 }
 
-/* line 22, scss/modules/_animation.scss */
-.slideFromLeft {
-  animation: slideFromLeft;
-  animation-iteration-count: 1;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes slideFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-/* line 43, scss/modules/_animation.scss */
-.slideFromRight {
-  animation: slideFromRight;
-  animation-iteration-count: 1;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes slideFromRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-/* line 63, scss/modules/_animation.scss */
+/* line 20, scss/modules/_animation.scss */
 .slideToLeft {
   animation: slideToLeft;
   animation-iteration-count: 1;
@@ -98,7 +60,45 @@ ul, li {
   }
 }
 
-/* line 88, scss/modules/_animation.scss */
+/* line 39, scss/modules/_animation.scss */
+.slideFromLeft {
+  animation: slideFromLeft;
+  animation-iteration-count: 1;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+/* line 57, scss/modules/_animation.scss */
+.slideFromRight {
+  animation: slideFromRight;
+  animation-iteration-count: 1;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+/* line 79, scss/modules/_animation.scss */
 .col-33 img:hover ~ div, .col-33 img ~ div:hover {
   animation: shading;
   animation-iteration-count: 1;
@@ -106,7 +106,7 @@ ul, li {
   animation-fill-mode: forwards;
 }
 
-/* line 97, scss/modules/_animation.scss */
+/* line 88, scss/modules/_animation.scss */
 .col-33 img ~ div {
   animation: showing;
   animation-iteration-count: 1;
@@ -114,7 +114,7 @@ ul, li {
   animation-fill-mode: forwards;
 }
 
-/* line 104, scss/modules/_animation.scss */
+/* line 96, scss/modules/_animation.scss */
 .planForm:hover {
   animation: hovering;
   animation-iteration-count: 1;
@@ -148,9 +148,6 @@ ul, li {
     background-color: #27c7ab;
     border: 2px solid #27c7ab;
     color: #ffffff;
-    .circle {
-      background-color: black;
-    }
   }
 }
 
