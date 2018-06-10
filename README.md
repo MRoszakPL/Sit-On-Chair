@@ -23,9 +23,9 @@ This project will be regularly updated until all website functionality are compl
 * JS (jQuery)
   
   
-## Status 4.06.2018 - Work in progress
+## Status 10.06.2018 - Work in progress
 
-All functionalities are working. CSS selectors need optimalization. Maybe JS part will be change to be written with jQuery. 
+All functionalities are working. CSS selectors need optimalization. 
 
               
 

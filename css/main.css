@@ -259,64 +259,68 @@ nav .minimal_menu span {
 }
 
 @media (min-width: 1024px) {
-  /* line 90, scss/partials/_header.scss */
+  /* line 1, scss/partials/_header.scss */
+  nav {
+    height: 4rem;
+  }
+  /* line 91, scss/partials/_header.scss */
   nav .container {
     flex-direction: row;
   }
-  /* line 94, scss/partials/_header.scss */
+  /* line 95, scss/partials/_header.scss */
   nav .dropdown {
     display: none;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     top: 5.8rem;
-    width: 100%;
+    width: 150%;
     text-align: center;
   }
-  /* line 102, scss/partials/_header.scss */
+  /* line 103, scss/partials/_header.scss */
   nav .dropdown li a {
     line-height: 2rem;
     font-weight: 400;
   }
-  /* line 106, scss/partials/_header.scss */
+  /* line 107, scss/partials/_header.scss */
   nav .dropdown li:first-child {
     padding-top: 1rem;
   }
-  /* line 112, scss/partials/_header.scss */
+  /* line 113, scss/partials/_header.scss */
   nav .minimal_menu {
     width: 50vw;
   }
-  /* line 114, scss/partials/_header.scss */
+  /* line 115, scss/partials/_header.scss */
   nav .minimal_menu p#menu {
     display: none;
   }
-  /* line 119, scss/partials/_header.scss */
+  /* line 120, scss/partials/_header.scss */
   nav .slideMenu {
     overflow-y: visible;
     width: 50vh;
-    height: 5rem;
+    height: 4rem;
     display: flex;
     z-index: 2;
   }
-  /* line 125, scss/partials/_header.scss */
+  /* line 126, scss/partials/_header.scss */
   nav .slideMenu ul {
     flex-direction: row;
     height: 100%;
     display: flex;
     list-style-type: none;
   }
-  /* line 130, scss/partials/_header.scss */
+  /* line 131, scss/partials/_header.scss */
   nav .slideMenu ul li {
     box-sizing: border-box;
     margin-right: 1rem;
     position: relative;
   }
-  /* line 135, scss/partials/_header.scss */
+  /* line 136, scss/partials/_header.scss */
   nav .slideMenu ul li ul {
     display: none;
     position: absolute;
   }
-  /* line 138, scss/partials/_header.scss */
+  /* line 139, scss/partials/_header.scss */
   nav .slideMenu ul li ul:before {
-    margin-top: calc(1rem - 5px);
+    margin-top: calc(0.5rem - 5px);
     position: absolute;
     box-sizing: border-box;
     content: "";
@@ -329,7 +333,7 @@ nav .minimal_menu span {
     border-right: 5px solid transparent;
     border-bottom: 5px solid black;
   }
-  /* line 154, scss/partials/_header.scss */
+  /* line 155, scss/partials/_header.scss */
   nav .slideMenu ul li:hover ul {
     display: block;
   }

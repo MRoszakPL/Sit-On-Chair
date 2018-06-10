@@ -1,71 +1,100 @@
-document.addEventListener("DOMContentLoaded", function () {
+$(function () {
 
-    //Obsługa slidera
-    var liElements = document.querySelectorAll(".slider>div>ul>li");
+    //Slider
+    var liElements = $(".slider > div > ul > li");
     var sliderIndex = 0;
-    var sliderButtons = document.querySelectorAll(".col-10");
+    var sliderButtons = $(".col-10");
+
 
     function moveSlideToRight() {
 
-        liElements[sliderIndex].classList.remove("slideFromRight");
-        liElements[sliderIndex].classList.remove("slideFromLeft");
-        liElements[sliderIndex].classList.add("slideToRight");
+        liElements.eq(sliderIndex).removeClass("slideFromRight");
+        liElements.eq(sliderIndex).removeClass("slideFromLeft");
+        liElements.eq(sliderIndex).addClass("slideToRight");
+
         setTimeout(function () {
-            liElements[sliderIndex].style.display="none";
-            liElements[sliderIndex].classList.remove("slideToRight");
+            liElements.eq(sliderIndex).css('display', 'none');
+            liElements.eq(sliderIndex).removeClass("slideToRight");
 
-        if (++sliderIndex > (liElements.length - 1)) {
-            sliderIndex = 0;
-        }
+            if (++sliderIndex > (liElements.length - 1)) {
+                sliderIndex = 0;
+            }
 
-        liElements[sliderIndex].style.display="flex";
-        liElements[sliderIndex].classList.add("slideFromLeft");
+            liElements.eq(sliderIndex).css('display', 'flex');
+            liElements.eq(sliderIndex).addClass("slideFromLeft");
 
-        clearInterval(interval);
-        interval = setInterval(moveSlideToRight,8000);
+            //Clearing set behaviour of slider
+            clearInterval(interval);
+
+            //Setting new behaviour
+            interval = setInterval(moveSlideToRight, 8000);
         }, 1000)
-
     }
 
     function moveSlideToLeft() {
 
-        liElements[sliderIndex].classList.remove("slideFromLeft");
-        liElements[sliderIndex].classList.remove("slideFromRight");
-        liElements[sliderIndex].classList.add("slideToLeft");
+        liElements.eq(sliderIndex).removeClass("slideFromLeft");
+        liElements.eq(sliderIndex).removeClass("slideFromRight");
+        liElements.eq(sliderIndex).addClass("slideToLeft");
 
         setTimeout(function () {
-            liElements[sliderIndex].style.display="none";
-            liElements[sliderIndex].classList.remove("slideToLeft");
+            liElements.eq(sliderIndex).css('display', 'none');
+            liElements.eq(sliderIndex).removeClass("slideToLeft");
 
             if (--sliderIndex < 0) {
                 sliderIndex = liElements.length - 1;
             }
 
-            liElements[sliderIndex].style.display="flex";
-            liElements[sliderIndex].classList.add("slideFromRight");
+            liElements.eq(sliderIndex).css('display', 'flex');
+            lliElements.eq(sliderIndex).addClass("slideFromRight");
 
+            //Clearing set behaviour of slider
             clearInterval(interval);
-            interval = setInterval(moveSlideToLeft,8000);
+
+            //Setting new behaviour
+            interval = setInterval(moveSlideToLeft, 8000);
         }, 1000)
     }
 
 
-    sliderButtons[1].addEventListener('click',moveSlideToRight);
+    //Assign button of slider to actions
+    sliderButtons.eq(0).on('click', moveSlideToLeft);
+    sliderButtons.eq(1).on('click', moveSlideToRight);
+
+    //Default slider behaviour
+    var interval = setInterval(moveSlideToRight, 8000);
+
+    //Calculator
+    var transportOfChair = $('.panel_left>.transport');
+    var trasportValue = $('.panel_right>.transport');
+    var transportCheckbox = $('#transport');
+
+    var titleOfChair = $('.panel_left>.title');
+    var titleOfChairValue = $('.panel_right>.title');
+
+    var colorOfChair = $('.panel_left>.color');
+    var colorOfChairValue = $('.panel_right>.color');
+
+    var patternOfChair = $('.panel_left>.pattern');
+    var patternOfChairValue = $('.panel_right>.pattern');
 
 
-    sliderButtons[0].addEventListener('click', moveSlideToLeft);
-
-    var interval = setInterval(moveSlideToRight,8000);
-
-    //Obsługa kalkulatora
+    var dropdownElementsCalculator = $(".drop_down_list");
+    var ulDropdownElements = $('.list_panel');
 
 
+    var sumOfPrices = $('.sum');
+
+
+    //Making summary of cost
     function summaryTheOrder() {
+
         var tableOfSummary = [];
-        tableOfSummary.push(parseInt(titleOfChairValue.innerText));
-        tableOfSummary.push(parseInt(colorOfChairValue.innerText));
-        tableOfSummary.push(parseInt(patternOfChairValue.innerText));
-        tableOfSummary.push(parseInt(trasportValue.innerText));
+
+        tableOfSummary.push(parseInt(titleOfChairValue.text()));
+        tableOfSummary.push(parseInt(colorOfChairValue.text()));
+        tableOfSummary.push(parseInt(patternOfChairValue.text()));
+        tableOfSummary.push(parseInt(trasportValue.text()));
 
         let sum = 0;
         for (var i = 0; i < tableOfSummary.length; i++) {
@@ -74,129 +103,122 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        sumOfPrices.innerText = sum;
+        sumOfPrices.text(sum);
     }
 
-
-    var dropdownElementsCalculator = document.querySelectorAll(".drop_down_list");
-    var ulDropdownElements = document.querySelectorAll('.list_panel');
-    var transportCheckbox = document.getElementById('transport');
-
-    for (let i = 0; i < dropdownElementsCalculator.length; i++) {
-        dropdownElementsCalculator[i].children[2].classList.toggle('invisible');
-    }
+    //All dropdownElements should be invisible at start
+    ulDropdownElements.toggle('invisible');
 
 
-
-    var titleOfChair = document.querySelector('.summary_panel>.panel_left>.title');
-    var colorOfChair = document.querySelector('.summary_panel>.panel_left>.color');
-    var patternOfChair = document.querySelector('.summary_panel>.panel_left>.pattern');
-    var titleOfChairValue = document.querySelector('.summary_panel>.panel_right>.title');
-    var colorOfChairValue = document.querySelector('.summary_panel>.panel_right>.color');
-    var patternOfChairValue = document.querySelector('.summary_panel>.panel_right>.pattern');
-    var trasportValue = document.querySelector('.summary_panel>.panel_right>.transport');
-    var sumOfPrices = document.querySelector('.sum');
-
+    //When we select value in dropdown we need to set proper values in other elements
     for (var i = 0; i < ulDropdownElements.length; i++) {
-        console.log(ulDropdownElements[i].children.length);
-        for (var j = 0; j < ulDropdownElements[i].children.length; j++) {
 
-            switch (i) {
-                case 0:
-                    ulDropdownElements[i].children[j].addEventListener('click', function () {
+        switch (i) {
+            case 0:
+                ulDropdownElements.eq(i).children().on('click', function () {
 
-                        titleOfChair.innerText = this.innerText;
-                        titleOfChairValue.innerHTML = this.getAttribute('data-price');
+                    var element = $(this);
 
-                        this.parentElement.parentElement.children[0].innerText = this.innerText;
-                        console.log(this.parentElement.classList);
+                    titleOfChair.text(element.text());
+                    titleOfChairValue.html(element.attr('data-price'));
+
+                    element.parent().parent().children().eq(0).text(element.text());
+
+                    summaryTheOrder();
+
+                })
+                break;
+
+            case 1:
+
+                ulDropdownElements.eq(i).children().on('click', function () {
+
+                    var element = $(this);
+
+                    colorOfChair.text(element.text());
+                    colorOfChairValue.html(element.attr('data-price'));
+
+                    element.parent().parent().children().eq(0).text(element.text());
+
+                    summaryTheOrder();
+
+                })
+                break;
+
+            case 2:
 
 
-                        summaryTheOrder();
+                ulDropdownElements.eq(i).children().on('click', function () {
 
+                    var element = $(this);
 
-                    })
-                    break;
+                    patternOfChair.text(element.text());
+                    patternOfChairValue.html(element.attr('data-price'));
 
-                case 1:
-                    ulDropdownElements[i].children[j].addEventListener('click', function () {
+                    element.parent().parent().children().eq(0).text(element.text());
 
-                        colorOfChair.innerText = this.innerText;
-                        colorOfChairValue.innerHTML = this.getAttribute('data-price');
-
-                        this.parentElement.parentElement.children[0].innerText = this.innerText;
-
-
-                        summaryTheOrder();
-
-                    })
-                    break;
-
-                case 2:
-                    ulDropdownElements[i].children[j].addEventListener('click', function () {
-
-                        patternOfChair.innerText = this.innerText;
-                        patternOfChairValue.innerHTML = this.getAttribute('data-price');
-
-                        this.parentElement.parentElement.children[0].innerText = this.innerText;
-                        summaryTheOrder();
-                    })
-                    break;
-            }
+                    summaryTheOrder();
+                })
+                break;
         }
     }
 
 
-    var transportOfChair = document.querySelector('.summary_panel>.panel_left>.transport');
+    //Changing when transport checkbox change state
+    transportCheckbox.on('change', function () {
 
-    transportCheckbox.addEventListener('change', function () {
-        if (trasportValue.innerText === '') {
-            transportOfChair.innerText = "Transport";
-            trasportValue.innerText = transportCheckbox.getAttribute('data-transport-price');
+        if (trasportValue.text() === '') {
+            transportOfChair.text("Transport");
+            trasportValue.text(transportCheckbox.attr('data-transport-price'));
         } else {
-            transportOfChair.innerText = '';
-            trasportValue.innerText = '';
+            transportOfChair.text('');
+            trasportValue.text('');
         }
-
         summaryTheOrder();
 
     })
 
-    dropdownElementsCalculator[0].addEventListener('click', function () {
-        dropdownElementsCalculator[0].children[2].classList.toggle('invisible');
-    })
-    dropdownElementsCalculator[1].addEventListener('click', function () {
-        dropdownElementsCalculator[1].children[2].classList.toggle('invisible');
-    })
-
-    dropdownElementsCalculator[2].addEventListener('click', function () {
-        dropdownElementsCalculator[2].children[2].classList.toggle('invisible');
+    //Hide/Show dropdown elements of calculator
+    dropdownElementsCalculator.on('click', function () {
+        var element = $(this);
+        element.children().eq(2).toggle('invisible');
     })
 
-
-
-    //Wysuwane menu w mobile-view
-
-
+    //Sliding menu from above in mobile-view
     var menuButton = $('#menu');
-    var menu  = $('.slideMenu');
+    var menu = $('.slideMenu');
     var i = 0;
 
     menuButton.on('click', function () {
-        if(i==0){
-
-
-            $('nav').animate({height: "400px"},1500);
+        if (i == 0) {
+            $('nav').animate({height: "25rem"}, 1500);
             i = 1;
         } else {
             i = 0;
-
-            $('nav').animate({height: "80px"},1500);
+            $('nav').animate({height: "5rem"}, 1500);
         }
 
         menu.slideToggle(1500);
-
     })
+
+    //Detection of width change
+    var laptopScreen = window.matchMedia("(min-width: 1024px)");
+
+    laptopScreen.addListener(function (laptopScreen) {
+        if (laptopScreen.matches) {
+            $('nav').animate({height: "4rem"}, 1500);
+            menu.show();
+        } else {
+            if(i==1){
+                $('nav').animate({height: "25rem"}, 1500);
+            } else {
+                $('nav').animate({height: "5rem"}, 1500);
+                menu.hide();
+            }
+
+
+        }
+    });
 
 
 });

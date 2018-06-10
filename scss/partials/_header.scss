@@ -87,15 +87,16 @@ nav {
 
   }
   @media (min-width: 1024px) {
+    height: 4rem;
     .container {
       flex-direction: row;
     }
 
     .dropdown {
       display: none;
-      padding-top: 1rem;
+      padding-top: 0.5rem;
       top: 5.8rem;
-      width: 100%;
+      width: 150%;
       text-align: center;
       li {
 
@@ -119,7 +120,7 @@ nav {
     .slideMenu {
       overflow-y: visible;
       width: 50vh;
-      height: 5rem;
+      height: 4rem;
       display: flex;
       z-index: 2;
       ul {
@@ -136,7 +137,7 @@ nav {
             display: none;
             position: absolute;
             &:before {
-              margin-top: calc(1rem - 5px);
+              margin-top: calc(0.5rem - 5px);
               position: absolute;
               box-sizing: border-box;
               content: "";
