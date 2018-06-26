@@ -23,10 +23,8 @@ This project will be regularly updated until all website functionality are compl
 * JS (jQuery)
   
   
-## Status 10.06.2018 - Work in progress
-
-All functionalities are working. CSS selectors need optimalization. 
-
+### Website look 
+![alt text](https://preview.ibb.co/kvbKeo/website_look.png)
               
 
 
